@@ -33,14 +33,11 @@ class Progress extends HookWidget {
 
     return ColoredBox(color: color)
         .niku()
-        .builder(
-          (child) => AnimatedBuilder(
+        .animatedBuilder(
+          animation: animatedProgress,
+          builder: (context, child) => FractionallySizedBox(
+            widthFactor: animatedProgress.value,
             child: child,
-            animation: animatedProgress,
-            builder: (context, child) => FractionallySizedBox(
-              widthFactor: animatedProgress.value,
-              child: child,
-            ),
           ),
         )
         .height(3)

@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
           shadowColor: Colors.transparent,
           iconTheme: IconThemeData(color: Colors.blue),
           titleTextStyle: TextStyle(color: Colors.blue),
-          systemOverlayStyle: SystemUiOverlayStyle(
+          systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
             statusBarIconBrightness: Brightness.light,
             statusBarBrightness: Brightness.light,
             statusBarColor: Colors.transparent,
